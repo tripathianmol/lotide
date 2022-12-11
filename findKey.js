@@ -10,3 +10,5 @@ let findKey = function (obj, cb) {
 
   return result;
 };
+
+module.exports = findKey;

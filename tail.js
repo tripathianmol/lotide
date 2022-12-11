@@ -1,16 +1,14 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+const tail = function(arr) {
+  let returnArr = [];
+
+  if (arr.length === 0 || arr.length === 1) {
+    return returnArr;
   } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+    for (let i = 1; i < arr.length; i++) {
+      returnArr.push(arr[i]);
+    }
+    return returnArr;
   }
 };
 
-const tail = function(arr) {
-  if (arr.length === 0 || arr.length === 1) {
-    return [];
-  } else {
-    arr.splice(2);
-    return arr;
-  }
-};
+module.exports = tail;
