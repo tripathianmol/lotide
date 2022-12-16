@@ -1,3 +1,4 @@
+// Search for a key on an object where its value matches a given value.
 const findKeyByValue = (obj, val) => {
   let result = undefined;
   

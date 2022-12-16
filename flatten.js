@@ -1,13 +1,18 @@
+// Flattens a nested array up to one level deep.
 const flatten = function(array) {
-/*     for (let i = 0; i < array.length; i++) {
-        if (array[i].isArray) {
-            for (let j = array[i].length - 1; j >= 0; j--) {
-                array.splice(i , 0, array[i][j]);
-            }
-        }
+  let result = [];
+    
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].isArray) {
+      for (let j = 0; j < array[i].length; j++) {
+        result.push(array[i][j]);
+      }
+      continue;
     }
- */
-  return array.flat();
+    result.push(array[i]);
+  }
+ 
+  return result;
 };
 
 module.exports = flatten;

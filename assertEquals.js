@@ -1,4 +1,4 @@
-// FUNCTION IMPLEMENTATION
+// Checks if the two arguments are identical.
 const assertEquals = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -6,7 +6,5 @@ const assertEquals = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-
-// TEST CODE
 
 module.exports = assertEquals;

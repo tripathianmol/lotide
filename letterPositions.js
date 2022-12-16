@@ -1,6 +1,7 @@
+// Return all the indices (zero-based positions) in the string where each character is found.
 const letterPositions = function(sentence) {
   const results = {};
-  // logic to update results here
+
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] === " ") {
       continue;
@@ -15,8 +16,5 @@ const letterPositions = function(sentence) {
 
   return results;
 };
-
-
-console.log(letterPositions("My name is Anmol"));
 
 module.exports = letterPositions;

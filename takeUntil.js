@@ -1,3 +1,4 @@
+// Returns a subset of the array until where the callback returns true.
 const takeUntil = function(array, callback) {
   let result = [];
 
@@ -10,26 +11,6 @@ const takeUntil = function(array, callback) {
   }
 
   return result;
-}
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length != arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
 };
 
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`🟢🟢🟢 Assertion Passed`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed`);
-  }
-};
+module.exports = takeUntil;

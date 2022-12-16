@@ -1,25 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`🟢🟢🟢 Assertion Passed`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed`);
-  }
-};
-
+// Return a subset of a given array, removing unwanted elements.
 const without = function(arr1, arr2) {
   let arr1Copy = arr1;
   for (let i = 0; i < arr2.length; i++) {
@@ -34,4 +13,4 @@ const without = function(arr1, arr2) {
   return arr1Copy;
 };
 
-console.log(without([1, 2, 3], [2, 3]));
+module.exports = without;

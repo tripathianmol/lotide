@@ -1,3 +1,4 @@
+// Returns the middle of the array.
 const middle = function(array) {
   let middle = [];
     

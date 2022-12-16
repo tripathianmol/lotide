@@ -1,3 +1,4 @@
+// Returns the array without the head.
 const tail = function(arr) {
   let returnArr = [];
 
